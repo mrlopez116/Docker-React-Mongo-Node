@@ -16,7 +16,7 @@ services:
             - webappnetwork
 
     api:
-        image: webapp-api
+        image: mweya/nhip:webapp-api
         restart: always
         ports:
             - "9000:9000"

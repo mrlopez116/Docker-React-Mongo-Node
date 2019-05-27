@@ -12,14 +12,14 @@ class App extends Component {
     }
 
     callAPI() {
-        fetch("http://localhost:9000/testAPI")
+        fetch("http://nhiproject.com:9000/testAPI")
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
     }
 
     callDB() {    
-        fetch("http://localhost:9000/testDB")        
+        fetch("http://nhiproject.com:9000/testDB")        
             .then(res => res.text())        
             .then(res => this.setState({ dbResponse: res }))        
             .catch(err => err);

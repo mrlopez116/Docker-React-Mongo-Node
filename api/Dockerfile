@@ -8,10 +8,13 @@ WORKDIR /api
 COPY package*.json /api/
 
 # install dependencies
-RUN npm install
+RUN npm install --verbose
 
 # Copy the current directory contents into the container at /api
 COPY . /api/
+
+# Make sure everything's here
+RUN echo "[api] " && ls -la
 
 # Make port 80 available to the world outside this container
 EXPOSE 80

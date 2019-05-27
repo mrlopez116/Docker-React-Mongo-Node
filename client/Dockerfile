@@ -8,10 +8,13 @@ WORKDIR /client
 COPY package*.json /client/
 
 # install dependencies
-RUN npm install
+RUN npm install --verbose
 
 # Copy the current directory contents into the container at /client
 COPY . /client/
+
+# Make sure everything's here
+RUN echo "[client] " && ls -la
 
 # Make port 3000 available to the world outside this container
 EXPOSE 3000
